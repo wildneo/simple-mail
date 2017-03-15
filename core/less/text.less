@@ -1,0 +1,117 @@
+@indent: @font-size * 1.25;
+
+h1, .h1{
+	@h1-size: @font-size * 1.5;
+
+	font-family: @font-family;
+	font-size: @h1-size;
+	line-height: @h1-size * 1.25;
+	font-weight: bold;
+	color: @font-color;
+	margin: @indent * 2 0 @indent 0;
+
+	&:first-child{
+		margin-top: 0;
+	}
+	&:last-child{
+		margin-bottom: 0;
+	}
+	&.noParagraphMargins{
+		margin: 0 !important;
+	}
+}
+h2, .h2{
+	@h2-size: @font-size * 1.25;
+
+	font-family: @font-family;
+	font-size: @h2-size;
+	line-height: @h2-size * 1.25;
+	font-weight: normal;
+	color: @font-color;
+	margin: @indent 0 @indent 0;
+
+	&:first-child{
+		margin-top: 0;
+	}
+	&:last-child{
+		margin-bottom: 0;
+	}
+	&.noParagraphMargins{
+		margin: 0 !important;
+	}
+}
+p, span{
+	font-family: @font-family;
+	font-size: @font-size;
+	line-height: @font-size * 1.25;
+	font-weight: normal;
+	color: @font-color;
+	margin-top: @indent;
+	margin-bottom: @indent;
+
+	&:first-child{
+		margin-top: 0;
+	}
+	&:last-child{
+		margin-bottom: 0;
+	}
+	&.noParagraphMargins{
+		margin: 0 !important;
+	}
+}
+.header, .preheader, .signature{
+	h1, .h1{
+		font-size: 21px;
+		line-height: 24px;
+		font-weight: bold;
+		color: #555555;
+	}
+	p, span{
+		font-size: @font-size * 0.75;
+		line-height: @font-size;
+		color: #999999;
+	}
+}
+b, strong, .b, .stromg{
+	font-weight: bold;
+}
+small, .small{
+	font-size: 85%;
+}
+big, .big{
+	font-size: 200%;
+}
+
+.noParagraphMargins{
+	h1, h2, .h1, .h2, p, span{
+		margin: 0 !important;
+	}
+}
+
+// text alignment
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+.text-center{
+  text-align: center;
+}
+.text-justify{
+  text-align: justify;
+}
+.text-nowrap{
+  white-space: nowrap;
+}
+
+// text case
+.text-lowercase{
+  text-transform: lowercase;
+}
+.text-uppercase{
+  text-transform: uppercase;
+}
+.text-capitalize{
+  text-transform: capitalize;
+}

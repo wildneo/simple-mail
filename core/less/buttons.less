@@ -1,0 +1,203 @@
+.button{
+	@textColor: @button-default-text-color;
+	@BgColor: @button-default-bg-color;
+
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	white-space: nowrap;
+	font-family: @font-family;
+	font-size: @font-size * 1.15;
+	background-color: @BgColor;
+	border: 1px solid @BgColor - #111111;
+	padding: 0.5em 0.85em;
+	margin: 0;
+
+	a{
+		color: @textColor;
+		text-decoration: none;
+	}
+
+	&.ghostly{
+		@bgColor: @button-ghostly-bg-color;
+		@textColor: @button-ghostly-text-color;
+		background-color: @bgColor;
+		border-color: @textColor;
+
+		a{
+			color: @textColor;
+		}
+	}
+
+	&.primary{
+		@bgColor: @button-primary-bg-color;
+		@textColor: @button-primary-text-color;
+		background-color: @bgColor;
+		border-color: @bgColor - #111111;
+
+		a{
+			color: @textColor;
+		}
+	}
+	&.success{
+		@bgColor: @button-success-bg-color;
+		@textColor: @button-success-text-color;
+		background-color: @bgColor;
+		border-color: @bgColor - #111111;
+
+		a{
+			color: @textColor;
+		}
+	}
+	&.warning{
+		@bgColor: @button-warning-bg-color;
+		@textColor: @button-warning-text-color;
+		background-color: @bgColor;
+		border-color: @bgColor - #111111;
+
+		a{
+			color: @textColor;
+		}
+	}
+	&.tiny{
+		font-size: @font-size * 0.75;
+	}
+	&.small{
+		font-size: @font-size * 0.875;
+	}
+	&.large{
+		font-size: @font-size * 1.15;
+	}
+}
+
+.socialIcons{
+	@defaultColor: #ffffff;
+	@defaultBgColor: #888888;
+	@unit: 8px;
+
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	white-space: nowrap;
+	font-family: @font-family;
+	font-size: @font-size * 0.875;
+	background-color: @defaultBgColor;
+	border: none;
+	height: @unit * 6;
+	width: @unit * 6;
+	padding: 0;
+	margin: 0;
+
+	&.vkontakte{
+		@bgColor: #45668E;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.facebook{
+		@bgColor: #3B5998;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.googleplus{
+		@bgColor: #DD4B39;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.twitter{
+		@bgColor: #00ACED;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.instagram{
+		@bgColor: #517FA4;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.pinterest{
+		@bgColor: #CB2027;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.stackoverflow{
+		@bgColor: #F48024;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.livejournal{
+		@bgColor: #004359;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.youtube{
+		@bgColor: #BB0000;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.twitch{
+		@bgColor: #6441A5;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.steam{
+		@bgColor: #222222;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.flickr{
+		@bgColor: #FF0084;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.behance{
+		@bgColor: #0079FF;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.skype{
+		@bgColor: #00AAF1;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.github{
+		@bgColor: #222222;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.odnoklassniki{
+		@bgColor: #F2720C;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+
+	&.tiny{
+		height: @unit * 3;
+		width: @unit * 3;
+	}
+	&.small{
+		height: @unit * 4;
+		width: @unit * 4;
+	}
+	&.large{
+		height: @unit * 8;
+		width: @unit * 8;
+	}
+	&.black{
+		background-color: #000000;
+		color: white;
+		border: none;
+	}
+	&.gray{
+		background-color: #999999;
+		color: white;
+		border: none;		
+	}
+}
+
+.radius{
+	border-radius: 3em *0.1;
+}
+.round{
+	border-radius: 3em;
+}

@@ -1,0 +1,65 @@
+mixin msoPadding(height)
+	<!--[if (gte mso 9)|(IE)]>
+		div(hight=height)
+	<![endif]-->
+
+mixin button(href, text, ...items)
+	table.button(class=items)
+		tr
+			td
+				a(href=href, title=text) #{text}
+
+mixin socialIcons(href, ...items)
+	table.socialIcons(class=items)
+		tr
+			td
+				if items[0] == "vkontakte"
+					a(href=href, title="Вконтакте"): img(src="images/social/vk.png" alt="vk")
+
+				else if items[0] == "facebook"
+					a(href=href, title="Facebook"): img(src="images/social/fb.png" alt="fb")
+
+				else if items[0] == "googleplus"
+					a(href=href, title="Google+"): img(src="images/social/gp.png" alt="gp")
+
+				else if items[0] == "twitter"
+					a(href=href, title="Twitter"): img(src="images/social/tw.png" alt="tw")
+
+				else if items[0] == "instagram"
+					a(href=href, title="Instagram"): img(src="images/social/ig.png" alt="ig")
+
+				else if items[0] == "pinterest"
+					a(href=href, title="Pinterest"): img(src="images/social/pt.png" alt="pt")
+
+				else if items[0] == "stackoverflow"
+					a(href=href, title="StackOverflow"): img(src="images/social/so.png" alt="so")
+
+				else if items[0] == "livejournal"
+					a(href=href, title="LiveJournal"): img(src="images/social/lj.png" alt="lj")
+
+				else if items[0] == "youtube"
+					a(href=href, title="YouTube"): img(src="images/social/yt.png" alt="yt")
+
+				else if items[0] == "twitch"
+					a(href=href, title="Twitch"): img(src="images/social/tc.png" alt="tc")
+
+				else if items[0] == "steam"
+					a(href=href, title="Steam"): img(src="images/social/st.png" alt="st")
+
+				else if items[0] == "flickr"
+					a(href=href, title="Flickr"): img(src="images/social/fl.png" alt="fl")
+
+				else if items[0] == "behance"
+					a(href=href, title="Behance"): img(src="images/social/be.png" alt="be")
+
+				else if items[0] == "skype"
+					a(href=href, title="Skype"): img(src="images/social/sk.png" alt="sk")
+
+				else if items[0] == "github"
+					a(href=href, title="Git Hub"): img(src="images/social/gh.png" alt="gh")
+
+				else if items[0] == "odnoklassniki"
+					a(href=href, title="Одноклассники"): img(src="images/social/ok.png" alt="ok")
+
+				else
+					a(href="error", title="error"): img(src="error" alt="error")

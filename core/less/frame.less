@@ -1,0 +1,108 @@
+.blockBorder(@width: 0, @type: none, @color: transparent, @radius: 0) {
+	border-radius: @radius;
+	border:@width @type @color;
+}
+.padding{padding: @padding;}
+
+.msoPadding{padding-bottom: @block-bottom-margins !important;}
+
+.wrapper{
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	background-color: @background-color;
+	table-layout: fixed;
+	text-align: center;
+}
+.preheader{
+	.block{
+		width: @block-width;
+		border: none;
+		background-color: transparent;
+		margin: 0 auto @block-bottom-margins auto;
+
+		&:first-child{
+			margin-top: @block-bottom-margins;
+		}
+	}
+}
+.header{
+	.block{
+		width: @block-width;
+		border: none;
+		background-color: transparent;
+		margin: 0 auto @block-bottom-margins auto;
+	}
+}
+.signature{
+	.block{
+		width: @block-width;
+		border: none;
+		background-color: transparent;
+		margin: 0 auto @block-bottom-margins auto;
+	}
+}
+.layout{
+	.block{
+		.blockBorder(@border-width, @border-type, @border-color, @border-radius);
+		width: @block-width;
+		background-color: @layout-block-color;
+		margin: 0 auto @block-bottom-margins auto;
+		display: block;
+		overflow: hidden;
+
+		&.noBlockDecor{
+			.blockBorder() !important;
+			background-color: transparent !important;
+		}
+	}
+}
+.footer{
+	.block{
+		.blockBorder(@border-width, @border-type, @border-color, @border-radius);
+		width: @block-width;
+		background-color: @footer-block-color;
+		margin: 0 auto @block-bottom-margins auto;
+		display: block;
+		overflow: hidden;
+
+		&.noBlockDecor{
+			.blockBorder() !important;
+			background-color: transparent !important;
+		}
+	}
+}
+.row{
+	width: @block-width;
+	&.padding{
+		padding: @padding / 2 !important;
+		.content{
+			.col-12,.col-11,.col-10,.col-9,.col-8,.col-7,.col-6,.col-5,.col-4,.col-3,.col-2,.col-1{
+				padding: @padding / 2 !important;
+			}
+		}
+	}
+	.content{
+		@width: 100%;
+		width: @width;
+		@piece: @width / 12;
+
+		.col-12{width: @width;}
+		.col-11{width: @piece * 11;}
+		.col-10{width: @piece * 10;}
+		.col-9{width: @piece * 9;}
+		.col-8{width: @piece * 8;}
+		.col-7{width: @piece * 7;}
+		.col-6{width: @piece * 6;}
+		.col-5{width: @piece * 5;}
+		.col-4{width: @piece * 4;}
+		.col-3{width: @piece * 3;}
+		.col-2{width: @piece * 2;}
+		.col-1{width: @piece;}
+
+		.col-12,.col-11,.col-10,.col-9,.col-8,.col-7,.col-6,.col-5,.col-4,.col-3,.col-2,.col-1{
+			&.padding{
+				padding: @padding;
+			}
+		}
+	}
+}
