@@ -1,0 +1,1 @@
+[Email boilerplate](http://wildneo.github.io/simple-mail/template/letter.html)
