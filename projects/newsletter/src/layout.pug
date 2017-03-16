@@ -1,0 +1,42 @@
+//    _____ _                 __        __  ___      _ __ 
+//   / ___/(_)___ ___  ____  / /__     /  |/  /___ _(_) / 
+//   \__ \/ / __ `__ \/ __ \/ / _ \   / /|_/ / __ `/ / /  
+//  ___/ / / / / / / / /_/ / /  __/  / /  / / /_/ / / /   
+// /____/_/_/ /_/ /_/ .___/_/\___/  /_/  /_/\__,_/_/_/    
+//                 /_/                                    
+//
+//             Email Development Framework                
+
+include ../../../core/mixins
+
+doctype transitional
+
+html(xmlns="http://www.w3.org/1999/xhtml" xml:lang="en")
+
+	head
+		include includes/meta
+
+		link(rel="stylesheet" href="style.css")
+
+		style(type="text/css")
+			include ../../../core/less/media.less
+
+		block title
+			title Newsletter Title
+
+	body
+		.wrapper
+			.preheader
+				include includes/preheader
+
+			.header
+				include includes/header
+
+			.layout
+				block content
+					
+			.footer
+				include includes/footer
+
+			.signature
+				include includes/signature

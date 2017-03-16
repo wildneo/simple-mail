@@ -1,0 +1,506 @@
+body{
+	background-color: @background-color;
+	margin: 0;
+}
+div{
+	display: table;
+	width: 100%;
+}
+table{
+	border-collapse: collapse;
+	mso-table-lspace: 0;
+	mso-table-rspace: 0;
+}
+td,th{
+	vertical-align: top;
+	padding: 0;
+}
+
+// links
+a{
+	font-family: @font-family;
+	color: @link-color;
+	background-color: none;
+	text-decoration: @link-style;
+
+	img{
+		border: 0;
+	}
+}
+
+// images
+.row{
+	img{
+		-ms-interpolation-mode: bicubic;
+		display: block;
+		width: 100%;
+		max-width: @block-width;
+
+		&.fix{
+			display: inline-block;
+			width: auto;
+			max-width: 100%;
+		}
+
+		&.logo{
+			display: inline-block;
+			width: @logo-width;
+		}
+	}
+}
+.button{
+	@textColor: @button-default-text-color;
+	@BgColor: @button-default-bg-color;
+
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	white-space: nowrap;
+	font-family: @font-family;
+	font-size: @font-size * 1.15;
+	background-color: @BgColor;
+	border: 1px solid @BgColor - #111111;
+	padding: 0.5em 0.85em;
+	margin: 0;
+
+	a{
+		color: @textColor;
+		text-decoration: none;
+	}
+
+	&.ghostly{
+		@bgColor: @button-ghostly-bg-color;
+		@textColor: @button-ghostly-text-color;
+		background-color: @bgColor;
+		border-color: @textColor;
+
+		a{
+			color: @textColor;
+		}
+	}
+
+	&.primary{
+		@bgColor: @button-primary-bg-color;
+		@textColor: @button-primary-text-color;
+		background-color: @bgColor;
+		border-color: @bgColor - #111111;
+
+		a{
+			color: @textColor;
+		}
+	}
+	&.success{
+		@bgColor: @button-success-bg-color;
+		@textColor: @button-success-text-color;
+		background-color: @bgColor;
+		border-color: @bgColor - #111111;
+
+		a{
+			color: @textColor;
+		}
+	}
+	&.warning{
+		@bgColor: @button-warning-bg-color;
+		@textColor: @button-warning-text-color;
+		background-color: @bgColor;
+		border-color: @bgColor - #111111;
+
+		a{
+			color: @textColor;
+		}
+	}
+	&.tiny{
+		font-size: @font-size * 0.75;
+	}
+	&.small{
+		font-size: @font-size * 0.875;
+	}
+	&.large{
+		font-size: @font-size * 1.15;
+	}
+}
+
+.socialIcons{
+	@defaultColor: #ffffff;
+	@defaultBgColor: #888888;
+	@unit: 8px;
+
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	white-space: nowrap;
+	font-family: @font-family;
+	font-size: @font-size * 0.875;
+	background-color: @defaultBgColor;
+	border: none;
+	height: @unit * 6;
+	width: @unit * 6;
+	padding: 0;
+	margin: 0;
+
+	&.vkontakte{
+		@bgColor: #45668E;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.facebook{
+		@bgColor: #3B5998;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.googleplus{
+		@bgColor: #DD4B39;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.twitter{
+		@bgColor: #00ACED;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.instagram{
+		@bgColor: #517FA4;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.pinterest{
+		@bgColor: #CB2027;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.stackoverflow{
+		@bgColor: #F48024;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.livejournal{
+		@bgColor: #004359;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.youtube{
+		@bgColor: #BB0000;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.twitch{
+		@bgColor: #6441A5;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.steam{
+		@bgColor: #222222;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.flickr{
+		@bgColor: #FF0084;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.behance{
+		@bgColor: #0079FF;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.skype{
+		@bgColor: #00AAF1;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.github{
+		@bgColor: #222222;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+	&.odnoklassniki{
+		@bgColor: #F2720C;
+		background-color: @bgColor;
+		border: 1px solid @bgColor - #111111;
+	}
+
+	&.tiny{
+		height: @unit * 3;
+		width: @unit * 3;
+	}
+	&.small{
+		height: @unit * 4;
+		width: @unit * 4;
+	}
+	&.large{
+		height: @unit * 8;
+		width: @unit * 8;
+	}
+	&.black{
+		background-color: #000000;
+		color: white;
+		border: none;
+	}
+	&.gray{
+		background-color: #999999;
+		color: white;
+		border: none;		
+	}
+}
+
+.radius{
+	border-radius: 3em *0.1;
+}
+.round{
+	border-radius: 3em;
+}
+.blockBorder(@width: 0, @type: none, @color: transparent, @radius: 0) {
+	border-radius: @radius;
+	border:@width @type @color;
+}
+.padding{padding: @padding;}
+
+.msoPadding{padding-bottom: @block-bottom-margins !important;}
+
+.wrapper{
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	background-color: @background-color;
+	table-layout: fixed;
+	text-align: center;
+}
+.preheader{
+	.block{
+		width: @block-width;
+		border: none;
+		background-color: transparent;
+		margin: 0 auto @block-bottom-margins auto;
+
+		&:first-child{
+			margin-top: @block-bottom-margins;
+		}
+	}
+}
+.header{
+	.block{
+		width: @block-width;
+		border: none;
+		background-color: transparent;
+		margin: 0 auto @block-bottom-margins auto;
+	}
+}
+.signature{
+	.block{
+		width: @block-width;
+		border: none;
+		background-color: transparent;
+		margin: 0 auto @block-bottom-margins auto;
+	}
+}
+.layout{
+	.block{
+		.blockBorder(@border-width, @border-type, @border-color, @border-radius);
+		width: @block-width;
+		background-color: @layout-block-color;
+		margin: 0 auto @block-bottom-margins auto;
+		display: block;
+		overflow: hidden;
+
+		&.noBlockDecor{
+			.blockBorder() !important;
+			background-color: transparent !important;
+		}
+	}
+}
+.footer{
+	.block{
+		.blockBorder(@border-width, @border-type, @border-color, @border-radius);
+		width: @block-width;
+		background-color: @footer-block-color;
+		margin: 0 auto @block-bottom-margins auto;
+		display: block;
+		overflow: hidden;
+
+		&.noBlockDecor{
+			.blockBorder() !important;
+			background-color: transparent !important;
+		}
+	}
+}
+.row{
+	width: @block-width;
+	&.padding{
+		padding: @padding / 2 !important;
+		.content{
+			.col-12,.col-11,.col-10,.col-9,.col-8,.col-7,.col-6,.col-5,.col-4,.col-3,.col-2,.col-1{
+				padding: @padding / 2 !important;
+			}
+		}
+	}
+	.content{
+		@width: 100%;
+		width: @width;
+		@piece: @width / 12;
+
+		.col-12{width: @width;}
+		.col-11{width: @piece * 11;}
+		.col-10{width: @piece * 10;}
+		.col-9{width: @piece * 9;}
+		.col-8{width: @piece * 8;}
+		.col-7{width: @piece * 7;}
+		.col-6{width: @piece * 6;}
+		.col-5{width: @piece * 5;}
+		.col-4{width: @piece * 4;}
+		.col-3{width: @piece * 3;}
+		.col-2{width: @piece * 2;}
+		.col-1{width: @piece;}
+
+		.col-12,.col-11,.col-10,.col-9,.col-8,.col-7,.col-6,.col-5,.col-4,.col-3,.col-2,.col-1{
+			&.padding{
+				padding: @padding;
+			}
+		}
+	}
+}
+@media screen and (max-width: 379px){
+	body,
+	.wrapper{background-color: white !important;}
+
+	.block{
+		width: 100% !important;
+		min-width: 320px;
+		border: 0 !important;
+	}
+
+	.col-12,.col-11,.col-10,.col-9,.col-8,.col-7,.col-6,.col-5,.col-4,.col-3,.col-2,.col-1{
+		display: block !important;
+		width: inherit !important;
+	}
+}
+
+@media screen and (min-width: 380px) and (max-width: 619px){
+	.block{
+		width: 380px !important;
+	}
+	
+	.col-12,.col-11,.col-10,.col-9,.col-8,.col-7,.col-6,.col-5,.col-4,.col-3,.col-2,.col-1{
+		display: block !important;
+		width: inherit !important;
+	}
+}
+
+@media screen and (min-width: 620px){}
+@indent: @font-size * 1.25;
+
+h1, .h1{
+	@h1-size: @font-size * 1.5;
+
+	font-family: @font-family;
+	font-size: @h1-size;
+	line-height: @h1-size * 1.25;
+	font-weight: bold;
+	color: @font-color;
+	margin: @indent * 2 0 @indent 0;
+
+	&:first-child{
+		margin-top: 0;
+	}
+	&:last-child{
+		margin-bottom: 0;
+	}
+	&.noParagraphMargins{
+		margin: 0 !important;
+	}
+}
+h2, .h2{
+	@h2-size: @font-size * 1.25;
+
+	font-family: @font-family;
+	font-size: @h2-size;
+	line-height: @h2-size * 1.25;
+	font-weight: normal;
+	color: @font-color;
+	margin: @indent 0 @indent 0;
+
+	&:first-child{
+		margin-top: 0;
+	}
+	&:last-child{
+		margin-bottom: 0;
+	}
+	&.noParagraphMargins{
+		margin: 0 !important;
+	}
+}
+p, span{
+	font-family: @font-family;
+	font-size: @font-size;
+	line-height: @font-size * 1.25;
+	font-weight: normal;
+	color: @font-color;
+	margin-top: @indent;
+	margin-bottom: @indent;
+
+	&:first-child{
+		margin-top: 0;
+	}
+	&:last-child{
+		margin-bottom: 0;
+	}
+	&.noParagraphMargins{
+		margin: 0 !important;
+	}
+}
+.header, .preheader, .signature{
+	h1, .h1{
+		font-size: 21px;
+		line-height: 24px;
+		font-weight: bold;
+		color: #555555;
+	}
+	p, span{
+		font-size: @font-size * 0.75;
+		line-height: @font-size;
+		color: #999999;
+	}
+}
+b, strong, .b, .stromg{
+	font-weight: bold;
+}
+small, .small{
+	font-size: 85%;
+}
+big, .big{
+	font-size: 200%;
+}
+
+.noParagraphMargins{
+	h1, h2, .h1, .h2, p, span{
+		margin: 0 !important;
+	}
+}
+
+// text alignment
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+.text-center{
+  text-align: center;
+}
+.text-justify{
+  text-align: justify;
+}
+.text-nowrap{
+  white-space: nowrap;
+}
+
+// text case
+.text-lowercase{
+  text-transform: lowercase;
+}
+.text-uppercase{
+  text-transform: uppercase;
+}
+.text-capitalize{
+  text-transform: capitalize;
+}
