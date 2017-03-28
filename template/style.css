@@ -1,4 +1,6 @@
 body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
   background-color: #f4f4f4;
   margin: 0;
 }
@@ -16,6 +18,9 @@ th {
   vertical-align: top;
   padding: 0;
 }
+img {
+  -ms-interpolation-mode: bicubic;
+}
 a {
   font-family: 'Courier New', Courier, monospace;
   color: #0077cc;
@@ -26,7 +31,6 @@ a img {
   border: 0;
 }
 .row img {
-  -ms-interpolation-mode: bicubic;
   display: block;
   width: 100%;
   max-width: 400px;
