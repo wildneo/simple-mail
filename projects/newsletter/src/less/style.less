@@ -1,4 +1,6 @@
 body{
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
 	background-color: @background-color;
 	margin: 0;
 }
@@ -16,6 +18,10 @@ td,th{
 	padding: 0;
 }
 
+img{
+	-ms-interpolation-mode: bicubic;
+	}
+
 // links
 a{
 	font-family: @font-family;
@@ -31,7 +37,6 @@ a{
 // images
 .row{
 	img{
-		-ms-interpolation-mode: bicubic;
 		display: block;
 		width: 100%;
 		max-width: @block-width;
