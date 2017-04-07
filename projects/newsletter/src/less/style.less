@@ -256,7 +256,7 @@ a{
 .round{
 	border-radius: 3em;
 }
-.blockBorder(@width: 0, @type: none, @color: transparent, @radius: 0) {
+.block-border(@width: 0, @type: none, @color: transparent, @radius: 0) {
 	border-radius: @radius;
 	border:@width @type @color;
 }
@@ -301,30 +301,30 @@ a{
 }
 .layout{
 	.block{
-		.blockBorder(@border-width, @border-type, @border-color, @border-radius);
+		.block-border(@border-width, @border-type, @border-color, @border-radius);
 		width: @block-width;
 		background-color: @layout-block-color;
 		margin: 0 auto @block-bottom-margins auto;
 		display: block;
 		overflow: hidden;
 
-		&.noBlockDecor{
-			.blockBorder() !important;
+		&.no-block-decor{
+			.block-border() !important;
 			background-color: transparent !important;
 		}
 	}
 }
 .footer{
 	.block{
-		.blockBorder(@border-width, @border-type, @border-color, @border-radius);
+		.block-border(@border-width, @border-type, @border-color, @border-radius);
 		width: @block-width;
 		background-color: @footer-block-color;
 		margin: 0 auto @block-bottom-margins auto;
 		display: block;
 		overflow: hidden;
 
-		&.noBlockDecor{
-			.blockBorder() !important;
+		&.no-block-decor{
+			.block-border() !important;
 			background-color: transparent !important;
 		}
 	}
@@ -410,7 +410,7 @@ h1, .h1{
 	&:last-child{
 		margin-bottom: 0;
 	}
-	&.noParagraphMargins{
+	&.no-paragraph-margins{
 		margin: 0 !important;
 	}
 }
@@ -430,7 +430,7 @@ h2, .h2{
 	&:last-child{
 		margin-bottom: 0;
 	}
-	&.noParagraphMargins{
+	&.no-paragraph-margins{
 		margin: 0 !important;
 	}
 }
@@ -449,7 +449,7 @@ p, span{
 	&:last-child{
 		margin-bottom: 0;
 	}
-	&.noParagraphMargins{
+	&.no-paragraph-margins{
 		margin: 0 !important;
 	}
 }
@@ -476,7 +476,7 @@ big, .big{
 	font-size: 200%;
 }
 
-.noParagraphMargins{
+.no-paragraph-margins{
 	h1, h2, .h1, .h2, p, span{
 		margin: 0 !important;
 	}

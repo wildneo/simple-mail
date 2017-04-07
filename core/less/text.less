@@ -16,7 +16,7 @@ h1, .h1{
 	&:last-child{
 		margin-bottom: 0;
 	}
-	&.noParagraphMargins{
+	&.no-paragraph-margins{
 		margin: 0 !important;
 	}
 }
@@ -36,11 +36,11 @@ h2, .h2{
 	&:last-child{
 		margin-bottom: 0;
 	}
-	&.noParagraphMargins{
+	&.no-paragraph-margins{
 		margin: 0 !important;
 	}
 }
-p, span{
+p, span, ul, ol{
 	font-family: @font-family;
 	font-size: @font-size;
 	line-height: @font-size * 1.25;
@@ -55,7 +55,7 @@ p, span{
 	&:last-child{
 		margin-bottom: 0;
 	}
-	&.noParagraphMargins{
+	&.no-paragraph-margins{
 		margin: 0 !important;
 	}
 }
@@ -82,36 +82,38 @@ big, .big{
 	font-size: 200%;
 }
 
-.noParagraphMargins{
+.no-paragraph-margins{
 	h1, h2, .h1, .h2, p, span{
 		margin: 0 !important;
 	}
 }
-
+ul, ol{
+	text-align: left;
+}
 // text alignment
 .text-left{
-  text-align: left;
+  text-align: left !important;
 }
 .text-right{
-  text-align: right;
+  text-align: right !important;
 }
 .text-center{
-  text-align: center;
+  text-align: center !important;
 }
 .text-justify{
-  text-align: justify;
+  text-align: justify !important;
 }
 .text-nowrap{
-  white-space: nowrap;
+  white-space: nowrap !important;
 }
 
 // text case
 .text-lowercase{
-  text-transform: lowercase;
+  text-transform: lowercase !important;
 }
 .text-uppercase{
-  text-transform: uppercase;
+  text-transform: uppercase !important;
 }
 .text-capitalize{
-  text-transform: capitalize;
+  text-transform: capitalize !important;
 }
