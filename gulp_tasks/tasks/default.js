@@ -3,6 +3,7 @@ var gulp 			= require('gulp'),
 
 gulp.task('default', function() {
 	runSequence(
+		'concatless',
 		'build',
 		'watch'
 	);
