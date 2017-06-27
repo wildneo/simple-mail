@@ -3,3 +3,5 @@ resources/
 projects/*
 !/projects/newsletter/
 !/projects/gulpfile.js
+*.sublime-project
+*.sublime-workspace
