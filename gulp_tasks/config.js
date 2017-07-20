@@ -1,5 +1,5 @@
 var dir = {
-		build: 	'./build',
+		build: 	'../build',
 		core: 	'../core',
 		src: 	'/src',
 		less: 	'/less',
