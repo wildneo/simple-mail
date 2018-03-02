@@ -4,7 +4,7 @@ var gulp 	= require('gulp'),
 	config 	= require('../config');
 
 gulp.task('cleanbuild', function() {
-	return del.sync(config.build + config.project);
+	return del.sync(config.build + config.project, {force: true});
 });
 
 gulp.task('cleancache', function() {
@@ -12,5 +12,5 @@ gulp.task('cleancache', function() {
 });
 
 gulp.task('deltemp', function() {
-	return del.sync(config.build + config.project + config.temp);
+	return del.sync(config.build + config.project + config.temp, {force: true});
 });

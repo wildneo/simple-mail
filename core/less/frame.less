@@ -1,24 +1,18 @@
-.block-border(@width: 0, @type: none, @color: transparent, @radius: 0) {
-	border-radius: @radius;
-	border:@width @type @color;
-}
 .padding{padding: @padding;}
-
-// .msoPadding{padding-bottom: @block-bottom-margins !important;}
 
 .wrapper{
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	background-color: @background-color;
 	table-layout: fixed;
-	text-align: center;
+	text-align: @default-text-align;
 }
 .preheader{
 	.block{
 		width: @block-width;
 		border: none;
-		background-color: transparent;
 		margin: 0 auto @block-bottom-margins auto;
+		background-color: transparent;
 
 		&:first-child{
 			margin-top: @block-bottom-margins;
@@ -29,8 +23,8 @@
 	.block{
 		width: @block-width;
 		border: none;
-		background-color: transparent;
 		margin: 0 auto @block-bottom-margins auto;
+		background-color: transparent;
 	}
 }
 .signature{
@@ -43,30 +37,34 @@
 }
 .layout{
 	.block{
-		.block-border(@border-width, @border-type, @border-color, @border-radius);
-		width: @block-width;
-		background-color: @layout-block-color;
-		margin: 0 auto @block-bottom-margins auto;
 		display: block;
 		overflow: hidden;
+		width: @block-width;
+		border: @border-width @border-type @border-color;
+		border-radius: @border-radius;
+		margin: 0 auto @block-bottom-margins auto;
+		background-color: @layout-block-color;
 
 		&.no-block-decor{
-			.block-border() !important;
+			border: 0 none transparent !important;
+			border-radius: 0 !important;
 			background-color: transparent !important;
 		}
 	}
 }
 .footer{
 	.block{
-		.block-border(@border-width, @border-type, @border-color, @border-radius);
-		width: @block-width;
-		background-color: @footer-block-color;
-		margin: 0 auto @block-bottom-margins auto;
 		display: block;
 		overflow: hidden;
+		width: @block-width;
+		border: @border-width @border-type @border-color;
+		border-radius: @border-radius;
+		margin: 0 auto @block-bottom-margins auto;
+		background-color: @footer-block-color;
 
 		&.no-block-decor{
-			.block-border() !important;
+			border: 0 none transparent !important;
+			border-radius: 0 !important;
 			background-color: transparent !important;
 		}
 	}
